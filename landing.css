@@ -1,0 +1,89 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+}
+
+ul {
+
+	background-color: #333; 
+	left:0;
+	top: 0;
+	position: fixed;
+	width: 100%
+
+}
+
+h2 {
+
+	font-color: black;
+	font-size: 24;
+}
+
+.correo {
+	display: flex;
+	justify-content: flex-end;
+	width:65%;
+
+	}
+
+.button {
+
+	font-size: 20;
+}
+
+.jumbotron {
+
+	width:100%;
+}
+
+/*ul {
+
+	background-color: #696969; 
+	position: fixed;
+	top: 0;
+	width: 100%
+
+}
+
+h2 {
+
+	font-color: black;
+	font-size: 24;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form {
+
+    float: right;
+    margin: right; 
+    text-align: right;
+    
+} 
+
+button {
+
+	font-size: 20;
+	background-color: #696969;
+	margin:auto;
+}
+
+.jumbotron {
+
+	width:100%;
+}
+
+.card {
+
+    align-content:left;
+    margin: auto; 
+    text-align: left;
+    
+	
+}*/
