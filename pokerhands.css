@@ -1,5 +1,5 @@
 .container {
-	background-color: black;
+	background-color: maroon;
 	color: white;
 }
 
@@ -10,7 +10,7 @@
 	border-radius: 500px;
 	display: flex;
 	flex-direction: column;
-	border: 15px solid brown;
+	border: 15px solid black;
 }
 
 .cardLocation {
@@ -60,11 +60,14 @@ button {
 	font-size: 18px;
 	margin: 15px;
 	outline: black;
-	font-weight: none;
+	font-weight: bold;
 
 }
 
-
+img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 #myCards {
 	background-color: blue;
@@ -86,3 +89,14 @@ button {
 	background-color: deeppink;
 }
 
+#handVal {
+	background-color: black;
+}
+
+
+.table {
+	background-color: maroon;
+	font-size: 20px;
+	color: white;
+	border-width: 10px;
+}

@@ -20,6 +20,7 @@ let sharedCard5 = document.getElementById("sharedCard5");
 
 let hands = ["highCard", "pair", "twoPair", "threeOfAKind", "straight", "flush", "fullHouse", "fourOfAKind", "straightFlush", "royalFlush"]
 
+// Builds a full array of 52 unique cards from two separate arrays of numbers and suits
 for (let i = 0; i < 13; i++) {
 	let card1 = numbers[i] + suits[0];
 	let card2 = numbers[i] + suits[1];
@@ -31,16 +32,19 @@ for (let i = 0; i < 13; i++) {
 	deck.push(card4);
 }
 
+// Builds array of card image urls from deck array
 for (let i = 0; i < 52; i++) {
 	let image = "cards/" + deck[i] + ".png"
 	images.push(image);
 }
 
+// creats image elements for everything in image url array
 for (let i = 0; i < 52; i++) {
 	let cardImage = document.createElement("IMG");
 	cardImage.id = images[i];
 }
 
+// Puts reverse card image on all card slots
 function dealFaceDown () {
 	for (let i = 0; i < 9; i++) {
 	let x = document.querySelectorAll(".cardLocation");
@@ -73,7 +77,7 @@ function revealRiver () {
 	sharedCard5.style.backgroundImage = "url('" + images[6] + "')";
 }
 
-
+// Returns stored values to zero, shuffles order of pack, and puts card reverse image on car spots.
 function shuffle() {
 	handRanks = [];
 	handSuits = [];
@@ -85,15 +89,18 @@ function shuffle() {
 		let outputCell = document.getElementById(hands[i]);
 		outputCell.innerHTML = " " }
 
-
-  for (let i = images.length - 1; i > 0; i--) {
+  	for (let i = images.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [images[i], images[j]] = [images[j], images[i]];
     [deck[i], deck[j]] = [deck[j], deck[i]];
-  }
-  dealFaceDown();
+  	}
+
+ 	dealFaceDown();
 }
 
+// converts non-number card values (J,Q,K,A) into numbers based on first character of cards in deck array
+// This makes it easier to sort values in handRanks array for hand calculation
+// Called within test function (see my hand value)
 
 function converter() {
 	for (let i = 0; i < 7; i++) {
@@ -112,26 +119,25 @@ function converter() {
 	}
 }
 
+// converts handranks into all numbers, then calls checkhand.
+
 function test () {
 	converter ();
 	checkHand ();
-	console.log(handRanks);
-	console.log(handSuits);
-	console.log(foundPairs);
-	console.log(foundTriples);
 }
 
-
+// sorts handrank highest to lowest
+// performs a series of tests to see which hand criteria are met
+// first examples for demonstration of concept only...too hard to go further at this stage!!
 function checkHand () {
 	handRanks.sort(function(a, b){return b-a});
 	highCardCheck ();
 	pairCheck ();
-
 }
 
+// finds and displays highest card (even if better hands exist)
 function highCardCheck () {
 
-	
 	let highest = handRanks[0];
 
 	if (highest == "14") {highest = "Ace"}
@@ -139,62 +145,26 @@ function highCardCheck () {
 	else if (highest == "12") {highest = "Queen"}
 	else if (highest == "11") {highest = "Jack"}
 
-
 let checkOuput = document.getElementById("highCard");
 checkOuput.innerHTML = "Highest card is: " + highest;
 
 }
 
-
-// Pair check function only produces an output if exactly one pair is found
-
+// checks if exactly one pair exists
 function pairCheck () {
-
-	foundPairs = [];
-	foundTriples = [];
-	foundQuadruples = [];
-
 	for (let i = 0; i < 7; i++) {
 	if (handRanks[i] == handRanks [i+1]) {
 	foundPairs.push(handRanks[i]);}
 	}
-
-	if (foundPairs.length > 1) {
-	for (let i = 0; i < foundPairs.length; i++) {
-	if (foundPairs[i] == foundPairs [i+1]) {
-	foundTriples.push(foundPairs[i]);
-	} else if (foundPairs[i] != foundPairs [i+1]) {
-		twoPairOutPut ();
-	}
-	}}
-
-	if (foundTriples.length == 1) {
-	if (foundTriples[0] == foundTriples[1]) {
-	foundQuadruples.push(foundTriples[0]);}
-	}
-
 	if (foundPairs.length == 1) {
-		onePairOutPut ();}}
-
-function twoPairOutPut () {
-
-	let first = foundPairs[0];
-	let second = foundPairs[1];
-	let pairs = [first, second]
-
-	for (let i = 0; i < 2; i++) {
-
-	if (pairs[i] == "14") {pairs[i]  = "Ace"}
-	else if (pairs[i]  == "13") {pairs[i]  = "King"}
-	else if (pairs[i]  == "12") {pairs[i]  = "Queen"}
-	else if (pairs[i]  == "11") {pairs[i]  = "Jack"}
+	onePairOutPut ();
+	} else if (foundPairs.length > 1) {
+	twoPairCheck ();
 	}
+}
 
-let checkOuput = document.getElementById("twoPair");
-checkOuput.innerHTML = "You have a pair of " + pairs[0] + "s and a pair of " + pairs[1] + "s.";}
-
+// output if exactly one pair found
 function onePairOutPut () {
-
 	if (foundPairs[0] == "14") {foundPairs[0] = "Ace"}
 	else if (foundPairs[0] == "13") {foundPairs[0] = "King"}
 	else if (foundPairs[0] == "12") {foundPairs[0] = "Queen"}
@@ -203,3 +173,34 @@ function onePairOutPut () {
 	checkOuput.innerHTML = "You have a pair of " + foundPairs[0] + "s.";
 	}
 
+// foundpairs has more than one value in it, checks for 'good pairs' which are not actually triples
+// finds first two pairs in chronological order
+// this function is not good enough for a situation where there is a low value triple (e.g. 2 jacks, 2 7s, 3 4s) - would still show up as two pair
+function twoPairCheck () {
+	let goodPairs = [];
+	for (let i = 0; i < foundPairs.length; i++) {
+
+	if (foundPairs[i] != foundPairs [i+1]) {
+	goodPairs.push(1);
+	} else if (foundPairs[i] == foundPairs [0]) {
+	goodPairs.push(0);
+	}
+	}
+
+	if (goodPairs[0] = goodPairs[1]) {
+		twoPairOutPut ();
+	}
+}
+// two pair output. needs word to avoid breaking DRY principles!
+function twoPairOutPut () {
+	if (foundPairs[0] == "14") {foundPairs[0] = "Ace"}
+	else if (foundPairs[0] == "13") {foundPairs[0] = "King"}
+	else if (foundPairs[0] == "12") {foundPairs[0] = "Queen"}
+	else if (foundPairs[0] == "11") {foundPairs[0] = "Jack"}
+	if (foundPairs[1] == "14") {foundPairs[1] = "Ace"}
+	else if (foundPairs[1] == "13") {foundPairs[1] = "King"}
+	else if (foundPairs[1] == "12") {foundPairs[1] = "Queen"}
+	else if (foundPairs[1] == "11") {foundPairs[1] = "Jack"}
+	let checkOuput = document.getElementById("twoPair");
+	checkOuput.innerHTML = "You have a pair of " + foundPairs[0] + "s and a pair of " + foundPairs[1] + "s.";
+	}

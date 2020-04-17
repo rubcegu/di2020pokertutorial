@@ -7,7 +7,8 @@
 </head>
 <body>
 	<div class = "container">
-		<h1>Identifying Poker Hands</h1>
+		<img src="logo.jpg">
+		<h2>Identifying Poker Hands!</h2>
 		<p>In the previous module we learned that the value of your poker hand is determind according to the strongest combination of 5 cards it is possible to select from a total of 7 available cards. We also saw a list of all the possible pokwer hands and how valuable they are in relation to each other. So far so simple, but in each round the cards are revealed in a specific order.</p>
 		<p>First of all each player is dealt two cards face down. These cards are kept hidden from other players, and without knowing what someone else's cards are it is impossible to know the value of their strongest hand.</p>
 		<p>Next, the five 'community cards' (or 'shared cards') are dealt, but hold on...! They are not all dealt at the same time - they arrive in three instalments, with a round of betting taking place between each.</p>
@@ -26,6 +27,7 @@
 			<li>Now click <strong>'Turn'</strong>. At this point you have 6 cards to choose from. What is the strongest hand you can make? Who is winning now - you or your opponent? Could anything change that on the 'river'?</li>
 			<li>Finally, click on <strong>'River'</strong> to reveal the last card. What is your strongest possible hand now? Who is able to make the best hand out of the 7 cards available to them? Think carefully and be sure before clicking <strong>'See Hand Value'</strong> to check if you were right...</li>
 		</ul>
+		<h5> ***UNDER CONSTRUCTION: Only works for high card, pair and two-pair!***</h5>
 
 	
 		<div class = "pokerTable">
@@ -57,17 +59,17 @@
 			<button onclick="revealRiver()" id="river">River</button>
 		</div>
 		<div class="buttondiv">
-			<button type = "button" class = "btn btn-primary btn-lg btn-block" onclick="test()" id="test">See my hand value...</button>
+			<button id = "handVal" onclick="test()" id="test">See Hand Value</button>
 		</div>
 	</div>
 
 	<div class="container">
 
-	<table class="table table-dark">
+	<table class="table">
 		<tr>
-			<th>Order</th>
-			<th>Hand Name</th>
-			<th>Your Hand...</th>
+			<th style="width: 20%">Order</th>
+			<th style="width: 20%">Hand Name</th>
+			<th style="width: 60%">Your Hand...</th>
 		</tr>
 		<tr>
 			<th>1</td>
