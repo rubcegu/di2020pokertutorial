@@ -1,0 +1,102 @@
+.container {
+	background-color: maroon;
+	color: white;
+}
+
+.pokerTable {
+	height: 100%;
+	width: 100%;
+	background-color: green;
+	border-radius: 500px;
+	display: flex;
+	flex-direction: column;
+	border: 15px solid black;
+}
+
+.cardLocation {
+	height: 150px;
+	width: 103px;
+	border-radius: 5px;
+	border: 2px solid white;
+	margin: 20px;
+	background-size: cover;
+}
+
+.playerCards {
+	display: flex;
+	flex-direction: row;
+	width: inherit;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+.sharedCards {
+	display: flex;
+	flex-direction: row;
+	width: inherit;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+.buttondiv {
+	height: 150px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+button {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	border-style: dashed;
+	background-color: green;
+	border-width: 10px;
+	color: white;
+	font-size: 18px;
+	margin: 15px;
+	outline: black;
+	font-weight: bold;
+
+}
+
+img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#myCards {
+	background-color: blue;
+}
+
+#oppCards {
+	background-color: purple;
+}
+
+#flop {
+	background-color: red;
+}
+
+#turn {
+	background-color: orange;
+}
+
+#river {
+	background-color: deeppink;
+}
+
+#handVal {
+	background-color: black;
+}
+
+
+.table {
+	background-color: maroon;
+	font-size: 20px;
+	color: white;
+	border-width: 10px;
+}

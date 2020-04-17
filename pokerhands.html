@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="pokerhands.css">	
+</head>
+<body>
+	<div class = "container">
+		<img src="logo.jpg">
+		<h2>Identifying Poker Hands!</h2>
+		<p>In the previous module we learned that the value of your poker hand is determind according to the strongest combination of 5 cards it is possible to select from a total of 7 available cards. We also saw a list of all the possible pokwer hands and how valuable they are in relation to each other. So far so simple, but in each round the cards are revealed in a specific order.</p>
+		<p>First of all each player is dealt two cards face down. These cards are kept hidden from other players, and without knowing what someone else's cards are it is impossible to know the value of their strongest hand.</p>
+		<p>Next, the five 'community cards' (or 'shared cards') are dealt, but hold on...! They are not all dealt at the same time - they arrive in three instalments, with a round of betting taking place between each.</p>
+		<ol>
+			<li><strong>The Flop:</strong> the first three shared cards to be dealt.</li>
+			<li><strong>The Turn:</strong> the fourth shared card to be dealt.</li>
+			<li><strong>The River:</strong> the fifth and final shared card to be dealt.</li>
+		</ol>
+		<p>Why don't you have a go at working through the 'rhythm' of a poker hand? Don't worry about betting for now - just make yourself familiar with the way the cards are revealed, and how each new development affects the possibilities available to you in terms of how strong your hand is. It's important to understand how your position changes with the revelation of each new card, so let's work through it one step at a time.</p>
+		<H2>Exercise:</h2> 
+		<p>Click first on <strong>'Deal New Hand'</strong>, and then on <strong>'Show My Cards'</strong>. Pause to consider each of the following questions as you work through each step of the exercise...</p>
+		<ul>
+			<li>How strong are my two cards? Is there anything I would rather have, and why?</li>
+			<li>This is just practice, so let's see what our opponent has. Click on <strong>Show Opponent Cards</strong>. Whose cards are better at this point? How can we tell without yet knowing what the rest of the cards will be?</li>
+			<li>Now click <strong>'Flop'</strong> to reveal the first three shared cards. You have 5 cards available to you now and therefore a full poker hand. Check your notes from last lesson - what do you have at this point? If you could change one of your cards for anything else, what would it be? What are you hoping to see on 'the turn', and how likely do you think it is that will happen? Who has a stronger hand at the moment - you or your opponent?</li>
+			<li>Now click <strong>'Turn'</strong>. At this point you have 6 cards to choose from. What is the strongest hand you can make? Who is winning now - you or your opponent? Could anything change that on the 'river'?</li>
+			<li>Finally, click on <strong>'River'</strong> to reveal the last card. What is your strongest possible hand now? Who is able to make the best hand out of the 7 cards available to them? Think carefully and be sure before clicking <strong>'See Hand Value'</strong> to check if you were right...</li>
+		</ul>
+		<h5> ***UNDER CONSTRUCTION: Only works for high card, pair and two-pair!***</h5>
+
+	
+		<div class = "pokerTable">
+			<div class = "playerCards">
+				<div class = "cardLocation" id="oppCard1"></div>
+				<div class = "cardLocation" id="oppCard2"></div>
+			</div>
+			<div class = "sharedCards">
+				<div class = "cardLocation" id="sharedCard1"></div>
+				<div class = "cardLocation" id="sharedCard2"></div>
+				<div class = "cardLocation" id="sharedCard3"></div>
+				<div class = "cardLocation" id="sharedCard4"></div>
+				<div class = "cardLocation" id="sharedCard5"></div>
+			</div>
+			<div class = "playerCards">
+				<div class = "cardLocation" id="playerCard1"></div>
+				<div class = "cardLocation" id="playerCard2"></div>
+			</div>
+		</div>
+		</div>
+	<div class = "container">
+
+		<div class="buttondiv">
+			<button onclick="shuffle()">Deal New Hand</button>
+			<button onclick="revealPlayerCards()" id="myCards">Show My Cards</button>
+			<button onclick="revealOppCards()" id="oppCards">Show Opponent Cards</button>
+			<button onclick="revealFlop()" id="flop">Flop</button>
+			<button onclick="revealTurn()" id="turn">Turn</button>
+			<button onclick="revealRiver()" id="river">River</button>
+		</div>
+		<div class="buttondiv">
+			<button id = "handVal" onclick="test()" id="test">See Hand Value</button>
+		</div>
+	</div>
+
+	<div class="container">
+
+	<table class="table">
+		<tr>
+			<th style="width: 20%">Order</th>
+			<th style="width: 20%">Hand Name</th>
+			<th style="width: 60%">Your Hand...</th>
+		</tr>
+		<tr>
+			<th>1</td>
+			<td>Royal Flush</td>
+			<td id="royalFlush"></td>
+		</tr>
+		<tr>
+			<th>2</td>
+			<td>Straight Flush</td>
+			<td id="straightFlush"></td>
+		</tr>
+		<tr>
+			<th>3</td>
+			<td>Four of a Kind</td>
+			<td id="fourOfAKind"></td>
+		</tr>
+		<tr>
+			<th>4</td>
+			<td>Full House</td>
+			<td id="fullHouse"></td>
+		</tr>
+		<tr>
+			<th>5</td>
+			<td>Flush</td>
+			<td id="flush"></td>
+		</tr>
+		<tr>
+			<th>6</td>
+			<td>Straight</td>
+			<td id="straight"></td>
+		</tr>
+		<tr>
+			<th>7</td>
+			<td>Three of a Kind</td>
+			<td id="threeOfAKind"></td>
+		</tr>
+		<tr>
+			<th>8</td>
+			<td>Two Pair</td>
+			<td id="twoPair"></td>
+		</tr>
+		<tr>
+			<th>9</td>
+			<td>Pair</td>
+			<td id="pair"></td>
+		</tr>
+		<tr>
+			<th>10</td>
+			<td>High Card</td>
+			<td id="highCard"></td>
+		</tr>
+	</table>
+</div>
+
+	<script type="text/javascript" src="pokerhands.js">
+	</script>
+
+</body>
+</html>
