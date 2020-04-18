@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TEST</title>
+	<title>Courses</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="courses.css">
 </head>
-
 <body>
-<!-- NAV BAR
-*Pending*
-+ Add Links
-+Add Logo -->
+<!-- NAV BAR-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="landing.html">
+    <img src="logo.jpg" id="logo">
+  </a>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="landing.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="pokerhands.html">Practice</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-2">
-    	<button class="btn btn-outline-success" type="button">Main button</button>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    	<button class="btn btn-outline-success" type="button">Log in</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
     </form>
   </div>
 </nav>
@@ -42,12 +38,8 @@
       <div class="col py-3 px-md-5"></div>
   </div>
 </div>
-<!-- INFORMATION DECK!
-STYLE PENDINGS:
-+IMG- HOVER EFFECT CHANGE
-CONTENT PENDINGS:
--->
-<div class="card-columns" >
+<!-- INFORMATION DECK!-->
+<div class="card-columns">
   <div class="card">
     <img src="https://techcrunch.com/wp-content/uploads/2019/07/GettyImages-136206865.jpg?w=1390&crop=1" class="card-img-top" alt="...">
     <div class="card-body">
@@ -56,7 +48,7 @@ CONTENT PENDINGS:
     </div>
   </div>
   <div class="card p-3">
-    <blockquote class="blockquote mb-0 card-body">
+    <blockquote class="blockquote mb-0 card-body" id="swing">
       <p>Learn to think like a professionar poker player.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
@@ -68,12 +60,12 @@ CONTENT PENDINGS:
   <div class="card">
     <img src="https://img.resized.co/balls_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwczpcXFwvXFxcL21lZGlhLmJhbGxzLmllXFxcL3VwbG9hZHNcXFwvMjAyMFxcXC8wNFxcXC8wNDE2MTMyM1xcXC9zaHV0dGVyc3RvY2tfMTU5ODQ2Nzg3Ni5qcGdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC9jYWNoZS5yZXNpemVkLmNvXFxcL25vLWltYWdlLnBuZ1wiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJlMDcxNzdkNDBjYWQ2MzMwOGEyM2E4OTdkNTYzYWRiYmE4YzY2NjM1In0=/how-to-play-online-poker-with-friends-during-the-lockdown.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Practice everywhere!</h5>
+      <p class="card-text">Build qualitative and quantitative skills in poker with fun and challenging interactive explorations.</p>
+      <button id="trialbutton" type="button" class="btn btn-primary">TRY NOW!</button>
     </div>
   </div>
-  <div class="card bg-primary text-white text-center p-3">
+  <div class="card bg-primary text-white text-center p-3" id="swing">
     <blockquote class="blockquote mb-0">
       <p>If you want to learn new things quickly and really understand the basic concepts, this is for you! </p>
       <footer class="blockquote-footer text-white">
@@ -85,8 +77,8 @@ CONTENT PENDINGS:
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+      <h5 class="card-title">WSOP 2020</h5>
+      <p class="card-text">A dozen key tentpole events have been finalized for the 2020 World Series of Poker (WSOP), set to run from May 26 to July 15, 2020 at the Rio All-Suite Hotel & Casino in Las Vegas.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
@@ -94,340 +86,264 @@ CONTENT PENDINGS:
     <img src="https://www.incimages.com/uploaded_files/image/970x450/GettyImages-200227486-001_397144.jpg" class="card-img-top" alt="...">
   </div>
   <div class="card p-3 text-right">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <blockquote class="blockquote mb-0" id="swing">
+      <p>It's absolutely fantastic!! If you are a curious person but want bite sized and approachable poker lessons to improve your game, this is your go-to website</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          Benjy Aarons-Richardson<cite title="Source Title">Dev Institute</cite>
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Different Levels</h5>
+      <p class="card-text">Get started as a beginner with the fundamentals, or dive right into the intermediate and advanced courses for professionals.</p>
     </div>
   </div>
 </div>
-
-
-<div class="container-fluid" style="background-color: rgb(240,240,240);">
-	<div class="row mx-md-n5">
-      <div class="col py-3 px-md-5">Custom column padding</div>
-	</div>
-</div>
-
-
-<div class="container" style="background-color: red">
-<div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-</div>
-</div>
-
-<div class="container-fluid" style="background-color: rgb(240,240,240);">
-	<div class="row mx-md-n5">t
-      <div class="col py-3 px-md-5">Custom column padding</div>
-	</div>
-</div>
-
-<div class="container">
-	<img src="..." class="img-fluid" alt="Responsive image">
-</div>
-
-
-<div class="container">
-  <hr class="my-4">
-  <span>FIRST CLASS!!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid" style="background-color: rgb(240,240,240);">
+<!--SPACE-->
+<div class="container-fluid" style="background-color: white;">
   <div class="row mx-md-n5">
-      <div class="col py-3 px-md-5 border bg-light">Custom column padding</div>
+      <div class="col py-3 px-md-5"></div>
   </div>
 </div>
-
-<div class="container">
-  <hr class="my-4">
-  <span>SECOND CLASS!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
+<!--SEARCH BAR-->
+<div class="container" style="background-color: white">
+<div>
+  <div>
+    <span class="input-group-text" id="Search">Search Lessons</span>
   </div>
-
-<div class="container">
-  <hr class="my-4">
-  <span>THIRD CLASS!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
+  <div>
+  <input id="myInput" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" >
   </div>
-
-<div class="container">
-  <hr class="my-4">
-  <span>FOURTH CLASS!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-<div class="container">
-  <hr class="my-4">
-  <span>FIFTH CLASS!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-
-<div class="container">
-  <hr class="my-4">
-  <span>SIX CLASS!</span>
-  <hr class="my-4">
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-<!--<img src="https://cdn.onlinewebfonts.com/svg/img_561190.png">-->
 </div>
+<!--SPACE-->
+<div class="container-fluid" style="background-color: white;">
+  <div class="row mx-md-n5">
+      <div class="col py-3 px-md-5"></div>
+  </div>
+</div>
+<!--SPACE-->
+<div class="container-fluid" style="background-color: white;">
+  <div class="row mx-md-n5">
+      <div class="col py-3 px-md-5"></div>
+  </div>
+</div>
+<!--RESPONSIVE IMAGE ADD EFFECT!!!-->
+<div class="container">
+	<img id="grow" src="https://oddslifenetstorage.blob.core.windows.net/casinobeats/2020/04/shutterstock_1244344783.jpg" class="img-fluid" alt="Responsive image">
+</div>
+<!--SPACE-->
+<div class="container-fluid" style="background-color: white;">
+  <div class="row mx-md-n5">
+      <div class="col py-3 px-md-5"></div>
+  </div>
+</div>
+<!--LESSONS CONTAINERS-->
+<div class="container">
+  <hr class="my-4">
+  <span>FUNDAMENTALS</span>
+  <hr class="my-4">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/445/445076.svg
+" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Rules</h5>
+        <p class="card-text">Before you begin playing Hold’em, you’ll want to learn the rules.</p>
+      </div>
+      <div id="Free1" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/445/445064.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Hands</h5>
+        <p class="card-text">Learn the traditional Poker Hand Ranks.</p>
+      </div>
+      <div id="Free2" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2495/2495139.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Table Position</h5>
+        <p class="card-text">Position refers to the order in which you act. Let's start mastering this concept.</p>
+      </div>
+      <div id="Free3" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/528/528280.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Glossary</h5>
+        <p class="card-text">It is what it is. Start learning the lingo!.</p>
+      </div>
+      <div id="Free4" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!--SPACE-->
+<div class="container-fluid" style="background-color: white;">
+  <div class="row mx-md-n5">
+      <div class="col py-3 px-md-5"></div>
+  </div>
+</div>
+<!--LESSONS CONTAINERS-->
+<div class="container">
+  <hr class="my-4">
+  <span>POKER MATH</span>
+  <hr class="my-4">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/432/432992.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Calculating Odds</h5>
+        <p class="card-text">Outs are the cards left in the deck that improve your hand and will help you win the pot at showdown.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2004/2004315.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Identifying Poker Hands!</h5>
+        <p class="card-text">Let's Make it REAL!</p>
+      </div>
+      <div class="card-footer">
+      <button id="trialbutton2" type="button" class="btn btn-primary">TRY NOW!</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2489/2489137.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Pot Odds & Expected Value</h5>
+        <p class="card-text">In cash games, you simply have to determine whether a call is “correct” in a mathematical sense.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+  </div>
+<!--LESSONS CONTAINERS-->
+<div class="container">
+  <hr class="my-4">
+  <span>BETTING</span>
+  <hr class="my-4">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/445/445073.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Basics</h5>
+        <p class="card-text">Betting in poker is all about maximizing value. You need to know how to get worse hands to call and better hands to fold.</p>
+      </div>
+      <div id="Free5" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/508/508376.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">C-Betting</h5>
+        <p class="card-text">A continuation bet (often abbreviated as “c-bet”)is a bet made by the player who made the last bet or raise.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2367/2367175.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Bet Sizing</h5>
+        <p class="card-text">All is about betting. Let's build some muscle over here!</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2706/2706077.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Overbetting</h5>
+        <p class="card-text">The image you wanna create is someone to be feared. You want to be feared in all situations. Overbetting could help (Sometimes!).</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+  </div>
+<!--LESSONS CONTAINERS-->
+<div class="container">
+  <hr class="my-4">
+  <span>BLUFFING</span>
+  <hr class="my-4">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2228/2228441.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Detecting and Executing the Bluff</h5>
+        <p class="card-text">The key to bluffing is credibility. The hand that you are trying to represent when bluffing has to make sense to your opponents.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/508/508367.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Hand Reviews</h5>
+        <p class="card-text">Let's practice this new skill in the real world.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <hr class="my-4">
+  <span>TOURNAMENT STRATEGY</span>
+  <hr class="my-4">
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/718/718523.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Opening</h5>
+        <p class="card-text">You will need some guidelines. Here's the place!</p>
+      </div>
+      <div id="Free6" class="card-footer">
+        <small class="text-muted">FREE LESSON</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/2004/2004311.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">In the Table</h5>
+        <p class="card-text">Mulitasking is for amateurs. Let's focus on the essentials!</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://image.flaticon.com/icons/svg/444/444175.svg" class="card-img-top" alt="..." height="100" width="100">
+      <div class="card-body">
+        <h5 class="card-title">Final Table</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Coming Soon</small>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="courses.js"></script>
 </body>
 </html>
